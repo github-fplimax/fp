@@ -2,6 +2,7 @@ import { NAV_LINKS } from "@/constants";
 import Image from "next/image";
 import Link from "next/link";
 import Button from "./Button";
+import SideBar from "./SideBar";
 
 const Navbar = () => {
   return (
@@ -31,13 +32,16 @@ const Navbar = () => {
         />
       </div>
 
-      <Image
+      {/* <Image
         src="menu.svg"
         alt="menu"
         width={32}
         height={32}
         className="inline-block cursor-pointer lg:hidden"
-      />
+      /> */}
+     <div className="inline-block cursor-pointer lg:hidden">
+     <SideBar/>
+     </div>
     </nav>
   );
 };
