@@ -1,31 +1,23 @@
-import type { Metadata } from 'next';
+import type { Metadata } from "next";
 
-import './globals.css'
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
-
-export const metadata: Metadata = {
-  title: 'Home : Farrasindo Perkasa',
-  icons : {
-    icon: '/FP GROUP.svg',
-  },
-  description: 'Farrasindo Perkasa ',
-}
+import "./globals.css";
+import { AOSInit } from "../aos";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en">
       <body>
         <Navbar />
-        <main className="relative overflow-hidden">
-          {children}
-        </main>
+        <AOSInit />
+        <main className="relative overflow-hidden">{children}</main>
         <Footer />
       </body>
     </html>
-  )
+  );
 }

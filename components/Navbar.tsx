@@ -5,9 +5,9 @@ import Button from "./Button";
 
 const Navbar = () => {
   return (
-    <nav className="flexBetween sticky bg-slate-200 top-0 max-container padding-container z-30 py-5">
+    <nav className="flexBetween sticky border-b-2 border bg-white top-0 max-container padding-container z-30 py-5">
       <Link href="/">
-        <Image src="/FP GROUP.png" alt="logo" width={74} height={29} />
+        <Image src="/FP GROUP.png" alt="logo" width={74} height={29}/>
       </Link>
 
       <ul className="hidden h-full gap-12 capitalize lg:flex">
@@ -25,7 +25,7 @@ const Navbar = () => {
       <div className="lg:flexCenter hidden">
         <Button
           type="button"
-          title="order now"
+          title="Order Now"
           // icon="/user.svg"
           variant="btn_dark_green"
         />

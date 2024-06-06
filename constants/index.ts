@@ -19,21 +19,21 @@ export const PEOPLE_URL = [
 // FEATURES SECTION
 export const FEATURES = [
   {
-    title: "Real maps can be offline",
+    title: "Available for rental and purchase",
     icon: "/map.svg",
     variant: "green",
     description:
       "We provide a solution for you to be able to use our application when climbing, yes offline maps you can use at any time there is no signal at the location",
   },
   {
-    title: "Set an adventure schedule",
+    title: "Specializing in Remote Areas",
     icon: "/calendar.svg",
     variant: "green",
     description:
       "Schedule an adventure with friends. On holidays, there are many interesting offers from Hilink. That way, there's no more discussion",
   },
   {
-    title: "Technology using augment reality",
+    title: "Prioritizes client satisfaction and efficiency.",
     icon: "/tech.svg",
     variant: "green",
     description:
@@ -49,29 +49,60 @@ export const FEATURES = [
 ];
 
 // FOOTER SECTION
+// export const FOOTER_LINKS = [
+//   {
+//     title: "Learn More",
+//     links: [
+//       // "About Farrasindo",
+//       // "Products",
+//       // "Completed Project",
+//       // "Career",
+//       // "Our services",
+//       // "Contact Us",
+//       { label: "About Farrasindo", value: "/about" },
+//       { label: "Products", value: "/product" },
+//       { label: "Completed Project", value: "/project" },
+//       { label: "Career", value: "/career" },
+//       { label: "Our service", value: "/services" },
+//       { label: "Contact Us", value: "/contact" },
+//     ],
+//   },
+//   {
+//     title: "Our Group",
+//     links: [
+//       "Fresh Beton",
+//       "Gunung Bumi Perkasa",
+//       "Citi Crane Perkasa",
+//       "Inti Jaya Industies",
+//       "Citi Pump",
+//     ],
+//   },
+// ];
+
 export const FOOTER_LINKS = [
   {
     title: "Learn More",
     links: [
-      "About Farrasindo",
-      "Products",
-      "Completed Project",
-      "Jobs",
-      "Our services",
-      "Contact Us",
+      { label: "About Farrasindo", value: "/about" },
+      { label: "Products", value: "/product" },
+      { label: "Completed Project", value: "/project" },
+      { label: "Career", value: "/career" },
+      { label: "Our service", value: "/services" },
+      { label: "Contact Us", value: "/contact" },
     ],
   },
   {
     title: "Our Group",
     links: [
-      "Fresh Beton",
-      "Gunung Bumi Perkasa",
-      "Citi Crane Perkasa",
-      "Inti Jaya Industies",
-      "Citi Pump",
+      { label: "Fresh Beton Indonesia", value: "/" },
+      { label: "Gunung Bumi Perkasa", value: "/" },
+      { label: "Citi Crane Perkasa", value: "/" },
+      { label: "Inti Jaya Industies", value: "/" },
+      { label: "Citi Pump", value: "/" },
     ],
   },
 ];
+
 
 export const FOOTER_CONTACT_INFO = {
   title: "Contact Us",
@@ -84,7 +115,7 @@ export const FOOTER_CONTACT_INFO = {
 export const SOCIALS = {
   title: "Social",
   links: [
-    "/facebook.svg",
+    "/linkedin.svg",
     "/instagram.svg",
     // "/twitter.svg",
     "/youtube.svg",
@@ -102,13 +133,13 @@ export const PRODUCT = [
   {
     title: "Self Loading Mixer",
     description:
-      "Self-loading concrete mixer is a versatile piece of construction equipment designed to efficiently produce and transport concrete on-site. Self-loading concrete mixer is equipped with a special bucket or loading shovel that allows it to self-load aggregates, cement, and water directly into the mixing drum.",
+      "Self-loading concrete mixer is a versatile piece of construction equipment designed to efficiently produce and transport concrete on-site.",
     image: "/self loading mixer.png",
   },
   {
     title: "Batch Pump",
     description:
-      "Farrasindo Batch Pump is a fusion of three concrete machinery products: the batching plant, stationary concrete pump, and batching plant. A game-changer in concrete delivery. It serves as an ideal partner for projects in remote areas. Batch pumps produce concrete through a systematic process of mixing and pumping it to the desired location",
+      "Farrasindo Batch Pump is a fusion of three concrete machinery products: the batching plant, stationary concrete pump, and batching plant. A game-changer in concrete delivery. It serves as an ideal partner for projects in remote areas.",
     image: "/batch pump.png",
   },
 ];
