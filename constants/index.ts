@@ -1,7 +1,7 @@
 // NAVIGATION
 export const NAV_LINKS = [
-  { href: "/", key: "home", label: "home" },
   { href: "/product", key: "product", label: "product" },
+  { href: "/service", key: "service", label: "service" },
   { href: "/project", key: "project", label: "project" },
   { href: "/news-event", key: "news-event", label: "news & event" },
   { href: "/about", key: "about", label: "about" },

@@ -18,9 +18,9 @@ export default function Home() {
   return (
     <>
       <Hero />
-      {/* <Camp /> */}
-      {/* <Guide /> */}
       <Features />
+      {/* <Camp /> */}
+      <Guide />
       {/* <GetApp /> */}
     </>
   )

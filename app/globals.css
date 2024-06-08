@@ -14,6 +14,7 @@ body {
   font-family: Inter;
 }
 
+
 /* Animasi hero section start */
 .fade-out-right {
   animation: fadeOutRight 0.5s forwards;
