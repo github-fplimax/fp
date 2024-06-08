@@ -7,14 +7,14 @@ import SideBar from "./SideBar";
 const Navbar = () => {
   return (
     <nav>
-      <div className="flex">
+      {/* <div className="flex hidden sm:block">
         <div className="bg-white w-[70%]"></div>
         <div className="flex py-2 border-l-8 border-gray-400 rounded-bl-lg bg-gray-400 w-[30%] flex-row gap-5 items-start justify-end max-container padding-container">
           <span className="">Order Now</span>
           <span className="">Call center</span>
           <span className=""></span>
         </div>
-      </div>
+      </div> */}
 
       <div className="flexBetween sticky border-b-2 bg-white top-0 max-container padding-container z-30 py-3">
         <Link href="/">

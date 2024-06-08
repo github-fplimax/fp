@@ -1,7 +1,43 @@
+"use client";
+
+import { TESTIMONIAL } from "@/constants";
+import { CaretDoubleLeft, CaretDoubleRight } from "@phosphor-icons/react";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 
 const Guide = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [animationClass, setAnimationClass] = useState("");
+
+  const handleSlide = () => {
+    setAnimationClass("fade-out");
+    setTimeout(() => {
+      setCurrentIndex((prevIndex) =>
+        prevIndex === TESTIMONIAL.length - 1 ? 0 : prevIndex + 1
+      );
+      setAnimationClass("fade-in");
+    }, 500); // Sesuaikan dengan durasi animasi fade-out
+  };
+
+  const handlePrev = () => {
+    setAnimationClass("fade-out-left");
+    setTimeout(() => {
+      setCurrentIndex((prevIndex) =>
+        prevIndex === 0 ? TESTIMONIAL.length - 1 : prevIndex - 1
+      );
+      setAnimationClass("fade-in-left");
+    }, 500); // Sesuaikan dengan durasi animasi fade-out
+  };
+
+  const handleNext = () => {
+    setAnimationClass("fade-out-right");
+    setTimeout(() => {
+      setCurrentIndex((prevIndex) =>
+        prevIndex === TESTIMONIAL.length - 1 ? 0 : prevIndex + 1
+      );
+      setAnimationClass("fade-in-right");
+    }, 500); // Sesuaikan dengan durasi animasi fade-out
+  };
   return (
     <section className="flexCenter flex-col">
       <div className="padding-container max-container w-full pb-24">
@@ -11,27 +47,49 @@ const Guide = () => {
         </p>
         <div className="flex flex-wrap justify-between gap-5 lg:gap-10">
           <h2 className="bold-40 lg:bold-64 xl:max-w-[390px]">
-            Lorem ipsum dolor sit amet.
+            What our customers are saying
           </h2>
           <div>
-          <p className="regular-16 text-gray-30 xl:max-w-[520px]">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            Laboriosam, voluptas nostrum! Sapiente distinctio dolores, vitae
-            nemo dicta quia? Fuga deleniti molestias suscipit ipsa aspernatur
-            vel aliquam atque eveniet ipsam quia!
-          </p>
+            <div className="flex flex-row gap-2">
+              <Image
+                src={TESTIMONIAL[currentIndex].image}
+                alt="user"
+                width={48}
+                height={48}
+                className="inline-block"
+              />
+              <h1 className="font-bold flex justify-center items-center text-center">{TESTIMONIAL[currentIndex].name}</h1>
+            </div>
+            <p className="regular-16 text-gray-30 xl:max-w-[520px]">
+              {TESTIMONIAL[currentIndex].description}
+            </p>
+          </div>
+          <div className="flex justify-between w-full mt-4">
+            <button
+              onClick={handlePrev}
+              // className="px-4 py-2 bg-gray-200 hover:bg-gray-300 rounded-md"
+              className="text-orange-500 bg-transparent hover:bg-orange-500 hover:text-white px-2 py-1 rounded-md transition-all duration-300"
+            >
+              <CaretDoubleLeft size={32} />
+            </button>
+            <button
+              onClick={handleNext}
+              className="text-orange-500 bg-transparent hover:bg-orange-500 hover:text-white px-2 py-1 rounded-md transition-all duration-300"
+            >
+              <CaretDoubleRight size={32} />
+            </button>
           </div>
         </div>
       </div>
 
       <div className="flexCenter max-container relative w-full">
-        <Image
+        {/* <Image
           src="/boat.png"
           alt="boat"
           width={1440}
           height={580}
           className="w-full object-cover object-center 2xl:rounded-5xl"
-        />
+        /> */}
 
         <div className="absolute flex bg-white py-8 pl-5 pr-7 gap-3 rounded-3xl border shadow-md md:left-[5%] lg:top-20">
           <Image

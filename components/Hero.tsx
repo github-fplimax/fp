@@ -123,6 +123,7 @@ import {
   CaretDoubleLeft,
   CaretDoubleRight,
 } from "@phosphor-icons/react";
+import Navbar from "./Navbar";
 
 const Hero = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -160,6 +161,7 @@ const Hero = () => {
 
   return (
     <section>
+      <Navbar/>
       <div className="border-b-2 max-container padding-container flex flex-col-reverse gap-5 pb-32 md:gap-28 lg:py-20 py-10 xl:flex-row">
         <div className="relative z-20 flex flex-1 flex-col xl:w-1/2">
           <h1 className="text-4xl capitalize">{PRODUCT[currentIndex].title}</h1>

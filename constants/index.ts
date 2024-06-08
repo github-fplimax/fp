@@ -1,11 +1,11 @@
 // NAVIGATION
 export const NAV_LINKS = [
   { href: "/product", key: "product", label: "product" },
-  { href: "/service", key: "service", label: "service" },
+  { href: "/services", key: "service", label: "service" },
   { href: "/project", key: "project", label: "project" },
   { href: "/news-event", key: "news-event", label: "news & event" },
   { href: "/about", key: "about", label: "about" },
-  { href: "/contact-us", key: "contact_us", label: "contact us" },
+  { href: "/contact-us", key: "contact-us", label: "contact us" },
 ];
 
 // CAMP SECTION
@@ -141,5 +141,25 @@ export const PRODUCT = [
     description:
       "Farrasindo Batch Pump is a fusion of three concrete machinery products: the batching plant, stationary concrete pump, and batching plant. A game-changer in concrete delivery. It serves as an ideal partner for projects in remote areas.",
     image: "/batch pump.png",
+  },
+];
+export const TESTIMONIAL = [
+  {
+    name: "qwerty",
+    description:
+      "PT Farrasindo Perkasa adalah mitra terpercaya kami dalam proyek konstruksi.",
+    image: "/person-1.png",
+  },
+  {
+    name: "asdfgg",
+    description:
+      "Tim mereka yang berpengalaman dan berdedikasi selalu siap membantu kami menyelesaikan proyek dengan lancar dan efisien.",
+    image: "/person-2.png",
+  },
+  {
+    name: "poiuyt",
+    description:
+      "Kami sangat merekomendasikan PT Farrasindo Perkasa kepada siapa saja yang membutuhkan alat berat berkualitas tinggi dan layanan yang profesional.",
+    image: "/person-3.png",
   },
 ];
