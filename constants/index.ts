@@ -103,7 +103,6 @@ export const FOOTER_LINKS = [
   },
 ];
 
-
 export const FOOTER_CONTACT_INFO = {
   title: "Contact Us",
   links: [
@@ -125,24 +124,28 @@ export const SOCIALS = {
 
 export const PRODUCT = [
   {
-    title: "Concrete Pump",
+    title: "Batch Pump",
     description:
-      "Comprising five distinct types: Standard, Long Boom, Super Long Boom, Double Super Long Boom, and Extra Double Super Long Boom. Capable of transferring concrete quickly while maintaining quality.",
-    image: "/concrete pump.png",
+      "Farrasindo Batch Pump is a fusion of three concrete machinery products: the batching plant, stationary concrete pump, and batching plant. A game-changer in concrete delivery. It serves as an ideal partner for projects in remote areas.",
+    image: "/batch_pump.png",
+    variant: "bg-green-500",
   },
   {
     title: "Self Loading Mixer",
     description:
       "Self-loading concrete mixer is a versatile piece of construction equipment designed to efficiently produce and transport concrete on-site.",
-    image: "/self loading mixer.png",
+    image: "/self_loading_mixer.png",
+    variant: "bg-blue-500",
   },
   {
-    title: "Batch Pump",
+    title: "Concrete Pump",
     description:
-      "Farrasindo Batch Pump is a fusion of three concrete machinery products: the batching plant, stationary concrete pump, and batching plant. A game-changer in concrete delivery. It serves as an ideal partner for projects in remote areas.",
-    image: "/batch pump.png",
+      "Comprising five distinct types: Standard, Long Boom, Super Long Boom, Double Super Long Boom, and Extra Double Super Long Boom. Capable of transferring concrete quickly while maintaining quality.",
+    image: "/concrete_pump.png",
+    variant: "bg-red-500",
   },
 ];
+
 export const TESTIMONIAL = [
   {
     name: "qwerty",
@@ -155,6 +158,7 @@ export const TESTIMONIAL = [
     description:
       "Tim mereka yang berpengalaman dan berdedikasi selalu siap membantu kami menyelesaikan proyek dengan lancar dan efisien.",
     image: "/person-2.png",
+    backgroundStyle: "",
   },
   {
     name: "poiuyt",
