@@ -9,7 +9,7 @@ const Features = () => {
         <div className="flex flex-1 lg:min-h-[900px]">
           <Image
             data-aos="fade-right"
-            src="/concrete pump.png"
+            src="/concrete_pump.png"
             alt="phone"
             width={440}
             height={1000}

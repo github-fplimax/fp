@@ -124,18 +124,18 @@ export const SOCIALS = {
 
 export const PRODUCT = [
   {
-    title: "Batch Pump",
-    description:
-      "Farrasindo Batch Pump is a fusion of three concrete machinery products: the batching plant, stationary concrete pump, and batching plant. A game-changer in concrete delivery. It serves as an ideal partner for projects in remote areas.",
-    image: "/batch_pump.png",
-    variant: "bg-green-500",
-  },
-  {
     title: "Self Loading Mixer",
     description:
       "Self-loading concrete mixer is a versatile piece of construction equipment designed to efficiently produce and transport concrete on-site.",
     image: "/self_loading_mixer.png",
     variant: "bg-blue-500",
+  },
+  {
+    title: "Batch Pump",
+    description:
+      "Farrasindo Batch Pump is a fusion of three concrete machinery products: the batching plant, stationary concrete pump, and batching plant. A game-changer in concrete delivery. It serves as an ideal partner for projects in remote areas.",
+    image: "/batch_pump.png",
+    variant: "bg-green-500",
   },
   {
     title: "Concrete Pump",
