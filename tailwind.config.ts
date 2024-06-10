@@ -96,6 +96,7 @@ module.exports = {
         'bg-img-2': "url('/img-2.png')",
         'feature-bg': "url('/feature-bg.png')",
         'bg-hero': "url('/hero-image2.png')",
+        'hero-image': "url('/IMG_1616.png')",
         pattern: "url('/pattern.png')",
         'pattern-2': "url('/pattern-bg.png')",
       },
