@@ -2,9 +2,9 @@ import Camp from "@/components/Camp";
 import Features from "@/components/Features";
 import Product from "@/components/Product";
 import GetApp from "@/components/GetApp";
-import Guide from "@/components/Guide";
 import Hero from "@/components/Hero";
 import { Metadata } from "next";
+import Testimonial from "@/components/Testimonial";
 
 export const metadata: Metadata = {
   title: 'Home - Farrasindo Perkasa',
@@ -20,9 +20,9 @@ export default function Home() {
     <>
       <Hero />
       <Features />
-      {/* <Product/> */}
+      <Product/>
       {/* <Camp /> */}
-      <Guide />
+      <Testimonial/>
       {/* <GetApp /> */}
     </>
   )

@@ -52,13 +52,21 @@
 //   plugins: [],
 // };
 
+const defaultTheme = require("tailwindcss/defaultTheme");
+const colors = require("tailwindcss/colors");
+const {
+  default: flattenColorPalette,
+} = require("tailwindcss/lib/util/flattenColorPalette");
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
+    "./src/**/*.{ts,tsx}"
   ],
+  darkMode: "class",
   theme: {
     extend: {
       colors: {
@@ -87,6 +95,7 @@ module.exports = {
         'bg-img-1': "url('/img-1.png')",
         'bg-img-2': "url('/img-2.png')",
         'feature-bg': "url('/feature-bg.png')",
+        'bg-hero': "url('/hero-image2.png')",
         pattern: "url('/pattern.png')",
         'pattern-2': "url('/pattern-bg.png')",
       },
@@ -106,11 +115,28 @@ module.exports = {
           '0%': { transform: 'translateX(-100%)', opacity: '0' },
           '100%': { transform: 'translateX(0)', opacity: '1' },
         },
+        scroll: {
+          to: {
+            transform: "translate(calc(-50% - 0.5rem))",
+          },
+        },
       },
       animation: {
         'slide-in': 'slide-in 1s ease-out forwards',
+        scroll: "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
       },
     },
   },
-  plugins: [],
+  plugins: [addVariablesForColors],
 };
+
+function addVariablesForColors({ addBase, theme }: { addBase: (styles: Record<string, any>) => void, theme: (path: string) => Record<string, any> }) {
+  let allColors = flattenColorPalette(theme("colors"));
+  let newVars = Object.fromEntries(
+    Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+  );
+
+  addBase({
+    ":root": newVars,
+  });
+}

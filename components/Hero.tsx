@@ -3,48 +3,26 @@
 import Image from "next/image";
 import Button from "./Button";
 import { PRODUCT } from "@/constants";
-import { handleNext, handlePrev} from "@/utils/handler"
-import { useState } from "react";
+import { handleNext, handlePrev } from "@/utils/handler";
+import { useState, useEffect } from "react";
 import { CaretDoubleLeft, CaretDoubleRight } from "@phosphor-icons/react";
 
-const COLORS = ["#f8d7da", "#d4edda", "#d1ecf1"]; // Array warna latar belakang
+export const COLORS = ["#Ed8936", "#48bb78", "#F56565"]
 
 const Hero = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [animationClass, setAnimationClass] = useState("");
-  const [bgColor, setBgColor] = useState(COLORS[0]); // State untuk warna latar belakang
-  const [rotation, setRotation] = useState(0); // State untuk rotasi latar belakang
+  const [bgColor, setBgColor] = useState(COLORS[0]);
+  const [rotation, setRotation] = useState(0);
 
-  const handlePrev = () => {
-    setAnimationClass("fade-out-left");
-    setTimeout(() => {
-      setCurrentIndex((prevIndex) => {
-        const newIndex = prevIndex === 0 ? PRODUCT.length - 1 : prevIndex - 1;
-        setBgColor(COLORS[newIndex % COLORS.length]); // Ubah warna latar belakang
-        setRotation(rotation - 45); // Ubah rotasi latar belakang
-        return newIndex;
-      });
-      setAnimationClass("fade-in-left");
-    }, 500);
-  };
-
-  const handleNext = () => {
-    setAnimationClass("fade-out-right");
-    setTimeout(() => {
-      setCurrentIndex((prevIndex) => {
-        const newIndex = prevIndex === PRODUCT.length - 1 ? 0 : prevIndex + 1;
-        setBgColor(COLORS[newIndex % COLORS.length]); // Ubah warna latar belakang
-        setRotation(rotation + 45); // Ubah rotasi latar belakang
-        return newIndex;
-      });
-      setAnimationClass("fade-in-right");
-    }, 500);
-  };
+  useEffect(() => {
+    setBgColor(COLORS[currentIndex]);
+  }, [currentIndex]);
 
   return (
-    <div className="border-b-2 max-container padding-container flex flex-col-reverse gap-5 pb-32 md:gap-28 lg:py-20 py-10 xl:flex-row">
+    <div className="border-b-2 max-container padding-container flex flex-col-reverse gap-5 pb-32 md:gap-28 lg:py-20 py-0 xl:flex-row">
       <div className="relative z-20 flex flex-1 flex-col xl:w-1/2">
-        <h1 className="text-4xl capitalize">{PRODUCT[currentIndex].title}</h1>
+        <h1 className="text-4xl capitalize sm:text-start text-center">{PRODUCT[currentIndex].title}</h1>
         <p className="text-md mt-6 xl:max-w-[520px] my-11">
           {PRODUCT[currentIndex].description}
         </p>
@@ -63,7 +41,7 @@ const Hero = () => {
           }}
         >
           <div
-            className="absolute bg-cover bg-center"
+            className="absolute bg-cover bg-center rounded-lg"
             style={{
               backgroundColor: bgColor,
               width: "450px",
@@ -106,26 +84,40 @@ const Hero = () => {
             </div>
           </div>
         </div>
-        <div className="absolute inset-y-0 flex items-center justify-between w-full px-4" style={{ top: '50%', transform: 'translateY(-50%)' }}>
+        <div className="absolute inset-y-0 flex items-center justify-between w-full px-4 hidden sm:flex" style={{ top: '50%', transform: 'translateY(-50%)' }}>
           <button
-            onClick={handlePrev}
-            className="text-orange-500 bg-transparent hover:bg-orange-500 hover:text-white px-2 py-1 rounded-md transition-all duration-300"
+            onClick={() => handlePrev(setCurrentIndex, setAnimationClass, setBgColor, setRotation, rotation)}
+            className="text-orange-500 bg-transparent z-50 hover:bg-orange-500 hover:text-white px-2 py-1 rounded-md transition-all duration-300"
             style={{
               position: 'absolute',
-              left: '-50px', // Sesuaikan jarak kiri
+              left: '-50px',
               transform: 'translateY(-50%)',
             }}
           >
             <CaretDoubleLeft size={32} />
           </button>
           <button
-            onClick={handleNext}
-            className="text-orange-500 bg-transparent hover:bg-orange-500 hover:text-white px-2 py-1 rounded-md transition-all duration-300"
+            onClick={() => handleNext(setCurrentIndex, setAnimationClass, setBgColor, setRotation, rotation)}
+            className="text-orange-500 bg-transparent z-50 hover:bg-orange-500 hover:text-white px-2 py-1 rounded-md transition-all duration-300"
             style={{
               position: 'absolute',
-              right: '-50px', // Sesuaikan jarak kanan
+              right: '-50px',
               transform: 'translateY(-50%)',
             }}
+          >
+            <CaretDoubleRight size={32} />
+          </button>
+        </div>
+        <div className="flex w-full justify-between mt-4 sm:hidden">
+          <button
+            onClick={() => handlePrev(setCurrentIndex, setAnimationClass, setBgColor, setRotation, rotation)}
+            className="text-orange-500 bg-transparent hover:bg-orange-500 hover:text-white px-2 py-1 rounded-md transition-all duration-300"
+          >
+            <CaretDoubleLeft size={32} />
+          </button>
+          <button
+            onClick={() => handleNext(setCurrentIndex, setAnimationClass, setBgColor, setRotation, rotation)}
+            className="text-orange-500 bg-transparent hover:bg-orange-500 hover:text-white px-2 py-1 rounded-md transition-all duration-300"
           >
             <CaretDoubleRight size={32} />
           </button>
