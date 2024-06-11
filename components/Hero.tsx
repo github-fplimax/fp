@@ -10,6 +10,7 @@ import LocationSearchBar from "./LocationSearchBar";
 import { TypewriterEffect } from "@/components/ui/typewriter-effect";
 
 export const COLORS = ["#Ed8936", "#48bb78", "#F56565"];
+export const IMAGE = ["/IMG_1616_11zon.jpg", "/GOPR1013.png", "/SAM_1815.png"];
 const Hero = () => {
   const words = [
     {
@@ -45,15 +46,26 @@ const Hero = () => {
   }, [currentIndex]);
 
   return (
-    <div className="border-b-2 max-container padding-container flex flex-col-reverse gap-5 pb-32 md:gap-28 lg:py-20 py-0 xl:flex-row">
+    <div
+      style={{
+        // backgroundImage: `url('${IMAGE[currentIndex]}')`,
+        top: 0,
+        backgroundImage: `url('/SAM_1815.png')`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
+      className="border-b-2 max-container padding-container flex flex-col-reverse gap-5 pb-32 md:gap-28 lg:py-20 py-0 xl:flex-row"
+    >
+      {/* <div className="absolute inset-0 bg-gradient-to-r from-[#252525] to-transparent z-10 pointer-events-none"></div> */}
       <div className="relative z-20 flex flex-1 flex-col xl:w-1/2">
         <h1 className="text-4xl sm:text-start text-center">
-        <TypewriterEffect words={words} />
-        {/* Have problems renting or buying concrete? */}
+          <TypewriterEffect words={words} />
+          {/* Have problems renting or buying concrete? */}
         </h1>
         <p className="text-md mt-6 xl:max-w-[520px] my-11">
-          At Farrasindo Perkasa, we have all the solutions for you, from
-          heavy equipment rental, to precast concrete we have it all.
+          At Farrasindo Perkasa, we have all the solutions for you, from heavy
+          equipment rental, to precast concrete we have it all.
         </p>
         <div className="flex flex-col w-full gap-3 sm:flex-row">
           {/* <Button type="button" title="Check Product" variant="btn_orange" /> */}
@@ -70,7 +82,7 @@ const Hero = () => {
             overflow: "hidden",
           }}
         >
-          <div
+          {/* <div
             className="absolute bg-cover bg-center rounded-lg"
             style={{
               backgroundColor: bgColor,
@@ -81,7 +93,7 @@ const Hero = () => {
               clipPath: "polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)",
               zIndex: 1,
             }}
-          ></div>
+          ></div> */}
           <div
             className={`absolute ${animationClass}`}
             style={{
@@ -104,17 +116,18 @@ const Hero = () => {
                 justifyContent: "center",
               }}
             >
-              <Image
+              {/* <Image
                 src={PRODUCT[currentIndex].image}
                 alt={PRODUCT[currentIndex].title}
                 width={300}
                 height={300}
                 className="object-contain rounded-3xl"
-              />
+              /> */}
             </div>
           </div>
         </div>
-        <div
+        {/* button next prev desktop start */}
+        {/* <div
           className="absolute inset-y-0 flex items-center justify-between w-full px-4 hidden sm:flex"
           style={{ top: "50%", transform: "translateY(-50%)" }}
         >
@@ -156,7 +169,9 @@ const Hero = () => {
           >
             <CaretDoubleRight size={32} />
           </button>
-        </div>
+        </div> */}
+        {/* button next prev desktop end */}
+
         <div className="flex w-full justify-between mt-4 sm:hidden">
           <button
             onClick={() =>

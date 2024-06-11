@@ -23,6 +23,13 @@ const Navbar = () => {
 
       <ul className="hidden h-full gap-12 capitalize lg:flex">
         <Menu setActive={setActive}>
+           <Link
+            href="/"
+            key="home"
+            className="regular-16 text-gray-50 flexCenter cursor-pointer pb-1.5 transition-all hover:font-bold"
+          >
+            home
+          </Link>
           <MenuItem setActive={setActive} active={active} item="Products">
             <div className="  text-sm grid grid-cols-2 gap-10 p-4">
               <ProductItem
