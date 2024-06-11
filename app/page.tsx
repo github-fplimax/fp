@@ -1,10 +1,11 @@
-import Camp from "@/components/Camp";
+// import PortfolioLayout from "@/components/Portfolio"; "@/components/Portfolio";
 import Features from "@/components/Features";
 import Product from "@/components/Product";
 import GetApp from "@/components/GetApp";
 import Hero from "@/components/Hero";
 import { Metadata } from "next";
 import Testimonial from "@/components/Testimonial";
+import PortfolioLayout from "@/components/Portfolio";
 
 export const metadata: Metadata = {
   title: 'Home - Farrasindo Perkasa',
@@ -21,7 +22,7 @@ export default function Home() {
       <Hero />
       <Features />
       <Product/>
-      {/* <Camp /> */}
+      {/* <PortfolioLayout /> */}
       <Testimonial/>
       {/* <GetApp /> */}
     </>
