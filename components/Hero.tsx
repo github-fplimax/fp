@@ -8,6 +8,7 @@ import { useState, useEffect } from "react";
 import { CaretDoubleLeft, CaretDoubleRight } from "@phosphor-icons/react";
 import LocationSearchBar from "./LocationSearchBar";
 import { TypewriterEffect } from "@/components/ui/typewriter-effect";
+import Partners from "./Partners";
 
 export const COLORS = ["#Ed8936", "#48bb78", "#F56565"];
 export const IMAGE = ["/IMG_1616_11zon.jpg", "/GOPR1013.png", "/SAM_1815.png"];
@@ -218,3 +219,39 @@ const Hero = () => {
 };
 
 export default Hero;
+
+// import React from 'react';
+// import { Carousel } from 'react-responsive-carousel';
+// import "react-responsive-carousel/lib/styles/carousel.min.css";
+
+// const HeroSection: React.FC = () => {
+//   return (
+//     <section className="relative w-full h-screen bg-black">
+//       <Carousel
+//         showThumbs={false}
+//         showStatus={false}
+//         infiniteLoop
+//         autoPlay
+//         interval={5000}
+//         className="h-full"
+//       >
+//         <div>
+//           <img src="/IMG_1616.png" alt="Hero Image 1" className="object-cover w-full h-full" />
+//         </div>
+//         <div>
+//           <img src="/IMG_1616.png" alt="Hero Image 2" className="object-cover w-full h-full" />
+//         </div>
+//         <div>
+//           <img src="/IMG_1616.png" alt="Hero Image 3" className="object-cover w-full h-full" />
+//         </div>
+//       </Carousel>
+//       {/* <div className="absolute inset-0 flex items-center justify-center">
+//         <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold text-white text-center">
+//           Xiaomi Indonesia
+//         </h1>
+//       </div> */}
+//     </section>
+//   );
+// };
+
+// export default HeroSection;

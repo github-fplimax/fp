@@ -6,6 +6,8 @@ import Hero from "@/components/Hero";
 import { Metadata } from "next";
 import Testimonial from "@/components/Testimonial";
 import PortfolioLayout from "@/components/Portfolio";
+import Partners from "@/components/Partners";
+import Location from "@/components/Location";
 
 export const metadata: Metadata = {
   title: 'Home - Farrasindo Perkasa',
@@ -24,6 +26,8 @@ export default function Home() {
       <Product/>
       {/* <PortfolioLayout /> */}
       <Testimonial/>
+      <Location/>
+      <Partners/>
       {/* <GetApp /> */}
     </>
   )
