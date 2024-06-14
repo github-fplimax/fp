@@ -145,12 +145,22 @@ const Hero = () => {
     setCurrentIndex((prevIndex) => (prevIndex === IMAGE.length - 1 ? 0 : prevIndex + 1));
   };
 
+  // const handleScrollDown = () => {
+  //   window.scrollTo({
+  //     top: window.innerHeight,
+  //     behavior: "smooth",
+  //   });
+  // };
+
   const handleScrollDown = () => {
-    window.scrollTo({
-      top: window.innerHeight,
-      behavior: "smooth",
-    });
+    if (typeof window !== 'undefined') {
+      window.scrollTo({
+        top: window.innerHeight,
+        behavior: "smooth",
+      });
+    }
   };
+  
 
   return (
     <div
