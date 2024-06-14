@@ -10,25 +10,25 @@ import Partners from "@/components/Partners";
 import Location from "@/components/Location";
 
 export const metadata: Metadata = {
-  title: 'Home - Farrasindo Perkasa',
-  icons : {
-    icon: '/FP GROUP.png',
+  title: "Home - Farrasindo Perkasa",
+  icons: {
+    icon: "/FP GROUP.png",
   },
-  description: 'Farrasindo Perkasa homepage',
-  keywords : 'concrete pump, batching plant, mixer, readymix, Farrasindo'
-}
+  description: "Farrasindo Perkasa homepage",
+  keywords: "concrete pump, batching plant, mixer, readymix, Farrasindo",
+};
 
 export default function Home() {
   return (
     <>
       <Hero />
       <Features />
-      <Product/>
+      <Product />
       {/* <PortfolioLayout /> */}
-      <Testimonial/>
-      <Location/>
-      <Partners/>
+      <Testimonial />
+      <Location />
+      <Partners />
       {/* <GetApp /> */}
     </>
-  )
+  );
 }
