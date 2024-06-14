@@ -36,8 +36,8 @@
 //   };
 
 //   const handleScrollDown = () => {
-//     window.scrollTo({
-//       top: window.innerHeight,
+//    .scrollTo({
+//       top:.innerHeight,
 //       behavior: "smooth",
 //     });
 //   };
@@ -146,16 +146,16 @@ const Hero = () => {
   };
 
   // const handleScrollDown = () => {
-  //   window.scrollTo({
-  //     top: window.innerHeight,
+  //  .scrollTo({
+  //     top:.innerHeight,
   //     behavior: "smooth",
   //   });
   // };
 
   // const handleScrollDown = () => {
-  //   if (typeof window !== 'undefined') {
-  //     window.scrollTo({
-  //       top: window.innerHeight,
+  //   if (typeof !== 'undefined') {
+  //    .scrollTo({
+  //       top:.innerHeight,
   //       behavior: "smooth",
   //     });
   //   }
