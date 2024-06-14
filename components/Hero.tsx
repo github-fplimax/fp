@@ -152,14 +152,14 @@ const Hero = () => {
   //   });
   // };
 
-  const handleScrollDown = () => {
-    if (typeof window !== 'undefined') {
-      window.scrollTo({
-        top: window.innerHeight,
-        behavior: "smooth",
-      });
-    }
-  };
+  // const handleScrollDown = () => {
+  //   if (typeof window !== 'undefined') {
+  //     window.scrollTo({
+  //       top: window.innerHeight,
+  //       behavior: "smooth",
+  //     });
+  //   }
+  // };
   
 
   return (
@@ -220,12 +220,12 @@ const Hero = () => {
       >
         <CaretDoubleRight size={32} />
       </button>
-      <button
+      {/* <button
         className="absolute animate-bounce bottom-2 left-1/2 transform -translate-x-1/2 p-2 bg-gray-800 rounded-full text-white"
         onClick={handleScrollDown}
       >
         <CaretDown size={32} />
-      </button>
+      </button> */}
     </div>
   );
 };
