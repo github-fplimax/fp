@@ -1,4 +1,3 @@
-// import PortfolioLayout from "@/components/Portfolio"; "@/components/Portfolio";
 import Features from "@/components/Features";
 import Product from "@/components/Product";
 import GetApp from "@/components/GetApp";
