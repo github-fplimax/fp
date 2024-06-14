@@ -10,6 +10,15 @@ const Map: React.FC = () => {
   const locations = [
     { id: 'head office', name: 'Head Office', position: [-6.197165935246908, 106.75606377319967] },
     { id: 'meruya', name: 'Meruya', position: [-6.2033286874817675, 106.7368489227159] },
+    { id: 'balaraja', name: 'Balaraja', position: [-6.2044735090176495, 106.4742490532345] },
+    { id: 'cikarang', name: 'Cikarang', position: [-6.318700606980848, 107.1434229667284] },
+    { id: 'jati asih', name: 'Jati asih', position: [-6.258981274378192, 106.95727029556357] },
+    { id: 'cirebon', name: 'Cirebon', position: [-6.758798517847206, 108.59495546488216] },
+    { id: 'semarang', name: 'Semarang', position: [-6.947144717052865, 110.49207220906251] },
+    { id: 'solo', name: 'Solo', position: [-7.564767952868212, 110.72266848208277] },
+    { id: 'kediri', name: 'Kediri', position: [-6.1887664,106.758861] },
+    // { id: '', name: '', position: [] },
+    // { id: '', name: '', position: [] },
   ];
 
   return (
