@@ -23,7 +23,7 @@ const Navbar = () => {
 
       <ul className="hidden h-full gap-12 capitalize lg:flex">
         <Menu setActive={setActive}>
-           <Link
+          <Link
             href="/"
             key="home"
             className="regular-16 text-black flexCenter cursor-pointer pb-1.5"
@@ -65,14 +65,22 @@ const Navbar = () => {
           >
             service
           </Link> */}
-           <MenuItem setActive={setActive} active={active} item="Services">
-          <div className="flex flex-col space-y-4 text-sm">
-            <HoveredLink href="/web-dev">Available For Rental And Purchase.</HoveredLink>
-            <HoveredLink href="/interface-design">Specializing In Remote Areas.</HoveredLink>
-            <HoveredLink href="/seo">Prioritizes Client Satisfaction And Efficiency.</HoveredLink>
-            <HoveredLink href="/branding">spread all over Indonesia.</HoveredLink>
-          </div>
-        </MenuItem>
+          <MenuItem setActive={setActive} active={active} item="Services">
+            <div className="flex flex-col space-y-4 text-sm">
+              <HoveredLink href="/web-dev">
+                Available For Rental And Purchase.
+              </HoveredLink>
+              <HoveredLink href="/interface-design">
+                Specializing In Remote Areas.
+              </HoveredLink>
+              <HoveredLink href="/seo">
+                Prioritizes Client Satisfaction And Efficiency.
+              </HoveredLink>
+              <HoveredLink href="/branding">
+                spread all over Indonesia.
+              </HoveredLink>
+            </div>
+          </MenuItem>
           {/* <Link
             href="/project"
             key="project"
@@ -143,14 +151,41 @@ const Navbar = () => {
               />
             </div>
           </MenuItem>
-          {/* <Link
-            href="/about"
+          <Link
+            href="/pages/about"
             key="about"
             className="regular-16 text-gray-50 flexCenter cursor-pointer pb-1.5 transition-all hover:font-bold"
           >
-            about
-          </Link> */}
-          <MenuItem setActive={setActive} active={active} item="About">
+            <MenuItem setActive={setActive} active={active} item="About">
+              <div className="  text-sm grid grid-cols-2 gap-10 p-4">
+                <ProductItem
+                  title="Algochurn"
+                  href="https://algochurn.com"
+                  src="https://assets.aceternity.com/demos/algochurn.webp"
+                  description="Prepare for tech interviews like never before."
+                />
+                <ProductItem
+                  title="Tailwind Master Kit"
+                  href="https://tailwindmasterkit.com"
+                  src="https://assets.aceternity.com/demos/tailwindmasterkit.webp"
+                  description="Production ready Tailwind css components for your next project"
+                />
+                <ProductItem
+                  title="Moonbeam"
+                  href="https://gomoonbeam.com"
+                  src="https://assets.aceternity.com/demos/Screenshot+2024-02-21+at+11.51.31%E2%80%AFPM.png"
+                  description="Never write from scratch again. Go from idea to blog in minutes."
+                />
+                <ProductItem
+                  title="Rogue"
+                  href="https://userogue.com"
+                  src="https://assets.aceternity.com/demos/Screenshot+2024-02-21+at+11.47.07%E2%80%AFPM.png"
+                  description="Respond to government RFPs, RFIs and RFQs 10x faster using AI"
+                />
+              </div>
+            </MenuItem>
+          </Link>
+          {/* <MenuItem setActive={setActive} active={active} item="About">
             <div className="  text-sm grid grid-cols-2 gap-10 p-4">
               <ProductItem
                 title="Algochurn"
@@ -177,7 +212,7 @@ const Navbar = () => {
                 description="Respond to government RFPs, RFIs and RFQs 10x faster using AI"
               />
             </div>
-          </MenuItem>
+          </MenuItem> */}
           {/* <Link
             href="/contact-us"
             key="contact-us"
